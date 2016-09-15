@@ -34,7 +34,6 @@ var defaults = [
         saveReactionTime: true
     },
     "Boxes", {
-        q: "<b>Does this box follow the rule?</b>",
         as: ["Yes", "No"],
         hasCorrect: false,
         presentHorizontally: true,
