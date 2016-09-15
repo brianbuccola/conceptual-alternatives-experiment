@@ -21,7 +21,6 @@ define_ibex_controller({
 });
 
 var shuffleSequence = seq("intro", "practice", randomize("real"));
-var practiceItemTypes = ["practice"];
 // var centerItems = false;
 
 var defaults = [
