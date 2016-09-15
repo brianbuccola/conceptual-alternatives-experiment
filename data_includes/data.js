@@ -34,7 +34,7 @@ var defaults = [
         saveReactionTime: true
     },
     "Boxes", {
-        as: ["This box satisfies the rule.", "This box does not satisfy the rule."],
+        as: ["The box satisfies the rule.", "The box does not satisfy the rule."],
         hasCorrect: false,
         presentHorizontally: true,
         // autoFirstChar: true
