@@ -21,6 +21,7 @@ define_ibex_controller({
 });
 
 var shuffleSequence = seq("intro", "practice", randomize("real"));
+var showProgressBar = false;
 // var centerItems = false;
 
 var defaults = [
@@ -29,7 +30,6 @@ var defaults = [
     //     normalMessage: "Please wait for the next item."
     // },
     "Form", {
-        hideProgressBar: false,
         continueOnReturn: true,
         saveReactionTime: true
     },
@@ -38,7 +38,6 @@ var defaults = [
         as: ["Yes", "No"],
         hasCorrect: false,
         presentHorizontally: true,
-        hideProgressBar: false,
         // autoFirstChar: true
     }
 ];
