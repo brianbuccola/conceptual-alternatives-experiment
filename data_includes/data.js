@@ -22,6 +22,7 @@ define_ibex_controller({
 
 var shuffleSequence = seq("intro", "practice", randomize("real"));
 var showProgressBar = false;
+var completionMessage = "The results were successfully sent to the server. Thanks! Now you need to go back to Mechanical Turk and enter the code LACN45K to validate your participation and obtain your payment."
 // var centerItems = false;
 
 var defaults = [
