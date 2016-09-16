@@ -20,7 +20,7 @@ define_ibex_controller({
     properties: { }
 });
 
-var shuffleSequence = seq("intro", "practice", randomize("real"));
+var shuffleSequence = seq("consent", "instructions", "practice", randomize("real"), "questionnaire");
 var showProgressBar = false;
 var completionMessage = "The results were successfully sent to the server. Thanks! Now you need to go back to Mechanical Turk and enter the code LACN45K to validate your participation and obtain your payment."
 // var centerItems = false;
@@ -49,14 +49,8 @@ var items = [
     //
     // Introductory materials.
     //
-    ["intro", "Form", {html: {include: "consent.html"}}],
-    ["intro", "Form", {
-        html: {include: "questionnaire.html"},
-        validators: {
-            age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019"; }
-        }
-    }],
-    ["intro", "Form", {html: {include: "instructions.html"}}],
+    ["consent", "Form", {html: {include: "consent.html"}}],
+    ["instructions", "Form", {html: {include: "instructions.html"}}],
 
     //
     // Four practice trials.
@@ -196,4 +190,10 @@ var items = [
     ["real", "Boxes", {html: {include: "item125.html"}}],
     ["real", "Boxes", {html: {include: "item126.html"}}],
 
+    ["questionnaire", "Form", {
+        html: {include: "questionnaire.html"},
+        validators: {
+            age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019"; }
+        }
+    }],
 ];
