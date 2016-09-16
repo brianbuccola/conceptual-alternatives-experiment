@@ -46,11 +46,16 @@ var items = [
     ["sep", "Separator", { }],
 
     //
-    // Introductory form for gathering participant information.
+    // Introductory materials.
     //
+    ["intro", "Form", {html: {include: "consent.html"}}],
     ["intro", "Form", {
-        html: {include: "intro.html"}
+        html: {include: "questionnaire.html"},
+        validators: {
+            age: function (s) { if (s.match(/^\d+$/)) return true; else return "Bad value for \u2018age\u2019"; }
+        }
     }],
+    ["intro", "Form", {html: {include: "instructions.html"}}],
 
     //
     // Four practice trials.
