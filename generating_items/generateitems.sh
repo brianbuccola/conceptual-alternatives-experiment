@@ -6,8 +6,8 @@ number_of_items_per_condition=6
 number_of_practice_items=4
 
 Q1s=("Some" "NotAll" "AtLeast3" "AtMost3" "AtLeast4" "AtMost4")
-Q2s=("All" "SBNA" "Exactly3" "Exactly4")
-acceptable_rules=("Some All" "Some SBNA" "NotAll SBNA" "AtLeast3 Exactly3" "AtMost3 Exactly3" "AtLeast4 Exactly4" "AtMost4 Exactly4")
+Q2s=("All" "No" "SBNA" "Exactly3" "Exactly4")
+acceptable_rules=("Some All" "Some SBNA" "NotAll No" "NotAll SBNA" "AtLeast3 Exactly3" "AtMost3 Exactly3" "AtLeast4 Exactly4" "AtMost4 Exactly4")
 conditions=("true" "false" "target")
 
 # Make items_dir.
