@@ -24,6 +24,7 @@ Some = lambda P: lambda B: 1 <= len([x for x in B if P(x)])
 All = lambda P: lambda B: len([x for x in B if P(x)]) == len(B)
 NotAll = lambda P: lambda B: not(All(P)(B))
 SBNA = lambda P: lambda B: Some(P)(B) and NotAll(P)(B)
+No = lambda P: lambda B: All(lambda B: not P(B))(B)
 
 Exactly3 = lambda P: lambda B: len([x for x in B if P(x)]) == 3
 AtLeast3 = lambda P: lambda B: len([x for x in B if P(x)]) >= 3
@@ -53,6 +54,8 @@ def qua2str(Q):
         return "NotAll"
     elif Q == SBNA:
         return "SBNA"
+    elif Q == No:
+        return "No"
 
     elif Q == Exactly3:
         return "Exactly3"
