@@ -3,7 +3,6 @@
 generateitem_script="./generateitem.py"
 items_dir="../chunk_includes"
 number_of_items_per_condition=6
-number_of_practice_items=4
 
 Q1s=("Some" "NotAll" "AtLeast3" "AtMost3" "AtLeast4" "AtMost4")
 Q2s=("All" "No" "SBNA" "Exactly3" "Exactly4")
